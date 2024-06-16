@@ -25,30 +25,30 @@ weatherForm.addEventListener("submit", (event) => {
           response.data.error.context.query.message);
       }
 
-      // Czyszczenie błędów i wyników
-      weatherErrors.innerHTML = "";
-      results.innerHTML = "";
-      searchInput.value = "";
+    // Czyszczenie błędów i wyników
+    weatherErrors.innerHTML = "";
+    results.innerHTML = "";
+    searchInput.value = "";
 
-      const data = response.data;
+    const data = response.data;
 
-      // Tworzenie elementów i wypełnianie danymi
-      const weatherContainer = document.createElement("div");
-      weatherContainer.className = "weather-container";
+    // Tworzenie elementów i wypełnianie danymi
+    const weatherContainer = document.createElement("div");
+    weatherContainer.className = "weather-container";
 
-      const locationElement = document.createElement("h2");
-      locationElement.textContent = `🌍 Location: ${data.address}, ${data.location}`;
-      weatherContainer.appendChild(locationElement);
+    const locationElement = document.createElement("h2");
+    locationElement.textContent = `🌍 Location: ${data.address}, ${data.location}`;
+    weatherContainer.appendChild(locationElement);
 
-      const temperatureElement = document.createElement("p");
-      temperatureElement.textContent = `🌡️ Temperature: ${data.temperature}°C`;
-      weatherContainer.appendChild(temperatureElement);
+    const temperatureElement = document.createElement("p");
+    temperatureElement.textContent = `🌡️ Temperature: ${data.temperature}°C`;
+    weatherContainer.appendChild(temperatureElement);
 
-      const conditionElement = document.createElement("p");
-      conditionElement.textContent = `⛅ Condition: ${data.forecast}`;
-      weatherContainer.appendChild(conditionElement);
+    const conditionElement = document.createElement("p");
+    conditionElement.textContent = `⛅ Condition: ${data.forecast}`;
+    weatherContainer.appendChild(conditionElement);
 
-      // Dodanie kontenera do wyników
-      results.appendChild(weatherContainer);
-    });
+    // Dodanie kontenera do wyników
+    results.appendChild(weatherContainer);
+  });
 });
