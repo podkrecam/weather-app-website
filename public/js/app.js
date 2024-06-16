@@ -1,11 +1,5 @@
 "use strict";
 
-// fetch("http://localhost:3000/weather?address=Warszawa").then((response) => {
-//   response.json().then((data) => {
-//     console.log(data);
-//   });
-// });
-
 const searchInput = document.querySelector(".search-input");
 const weatherForm = document.querySelector(".weather-form");
 const weatherErrors = document.querySelector(".weather-error");
@@ -20,7 +14,7 @@ weatherForm.addEventListener("submit", (event) => {
 
   weatherErrors.innerHTML = "Loading...";
   axios
-    .get(`http://localhost:3000/weather?address=${location}`)
+    .get(`/weather?address=${location}`)
     .then(function (response) {
       if (Object.keys(response.data).length === 0) {
         return (weatherErrors.innerHTML =
