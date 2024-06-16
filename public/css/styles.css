@@ -103,6 +103,7 @@ main {
   margin: auto;
   border-radius: 1em;
   padding: 2em;
+  box-shadow: 2px 2px 2px 2px black;
 }
 
 /* FOOTER */
@@ -156,4 +157,10 @@ footer {
 .return-home a {
   color: white;
   text-decoration: none;
+}
+
+.describe {
+  margin-top: 2rem;
+  color: white;
+  font-size: 1.5rem;
 }
